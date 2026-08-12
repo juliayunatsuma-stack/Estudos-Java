@@ -49,4 +49,37 @@ public class Main {
 
      }
 }
+package org.example;
+
+public class Nomes {
+    public void Nomes(){
+        System.out.println("Os nomes são:");
+        String[] nomes={"Julia","Samuel", "Ana"};
+        for (int j= 0; j<3; j++){
+            System.out.println(nomes[j]);
+        }
+    }
+}
+
+package org.example;
+
+public class Man {
+    public void Man(){
+        for (int m= 1; m<=100; m++){
+            System.out.println(m+" ");
+        }
+    }
+}
+package org.example;
+
+public class Baby{
+    public void baby() {
+        for (int i= 1; i< 10; i++){
+            System.out.println(i);
+        }
+    }
+}
+
+
+
 
