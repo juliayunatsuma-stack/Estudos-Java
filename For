@@ -1,0 +1,52 @@
+package org.example;
+
+public class Number1 {
+    public void number1(){
+        System.out.println("Os numeros são:");
+        int[] Numero= {24, 25, 26, 27};
+        for (int f= 0; f<4; f++){
+            System.out.println(Numero[f]);
+        }
+
+    }
+}
+
+
+
+
+
+
+
+package org.example;
+
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args)
+    { Number1 i= new Number1();
+        i.number1();
+                 //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+         Scanner scanner= new Scanner(System.in);
+         int n;
+         System.out.println("Escolha um numero?");
+         n=scanner.nextInt();
+         if (n<0){
+             System.out.println("Numero negativo");
+
+
+         } else if (n==0) {
+             System.out.println("Numero é zero");
+
+
+         } else {
+             System.out.println("Numero positivo");
+
+         }
+
+
+     }
+}
+
