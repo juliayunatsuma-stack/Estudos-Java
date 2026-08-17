@@ -1,0 +1,45 @@
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("Júlia", 18 );
+        System.out.println(pessoa.nome);
+        System.out.println(pessoa.idade);
+        System.out.println(pessoa.cidade);
+
+    }
+
+}
+
+
+public class Pessoa {
+
+    public String nome;
+    public int idade;
+    public String cidade;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = "Júlia";
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = 18;
+    }
+    public void setCidade(String cidade){
+        this. cidade= "Formosa";
+    }
+    public Pessoa (String nome, int idade){
+this.nome= "Júlia";
+this.idade= 18;
+this.cidade= "Formosa";
+
+
+
+    }
+}
