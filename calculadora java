@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner scanner= new Scanner(System.in);
+
+    System.out.println("digite o primeiro número:");
+    double numero1;
+    numero1= scanner.nextDouble();
+    System.out.println("Digite o segundo número:");
+    double numero2;
+    numero2= scanner.nextDouble();
+    System.out.println("1:soma; 2:subtração; 3:Multiplicação; 4:Divisão");
+    int escolha;
+    escolha=scanner.nextInt();
+        System.out.println("Escolha uma operação:");
+    System.out.println("Resultado");
+
+    if (escolha==1){
+        System.out.println("soma");
+        System.out.println(numero1+numero2);
+
+    } else if (escolha==2) {
+        System.out.println("Subtração");
+        System.out.println(numero1-numero2);
+
+    } else if (escolha==3) {
+        System.out.println("Multiplicação");
+        System.out.println(numero1*numero2);
+
+    } else {
+        System.out.println("Divisão");
+        System.out.println(numero1/numero2);
+    }
+
+
+    }
+
+
+    }
