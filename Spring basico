@@ -1,0 +1,38 @@
+// começo
+
+package com.example.springbasico;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBasicoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBasicoApplication.class, args);
+    }
+
+}
+
+
+package com.example.springbasico;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@RestController
+public class Alunocontroller {
+    @GetMapping ("/aluno")
+    public String aluno(){
+        return "HI, sou Yuna<br> Sou de Formosa<br> Tenho 18 anos";
+
+
+
+
+    }
+
+}
+
+// local onde vc pode ver o terminal
+
+localhost:8080/aluno
