@@ -22,3 +22,43 @@ public class Alunocontroller {
     }
 
 }
+
+
+package com.example.springbasico;
+
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@RestController
+public class Alunocontroller {
+    @GetMapping ("/aluno")
+    public String aluno(@RequestParam String nome,
+                        @RequestParam String cidade,
+                        @RequestParam int idade,
+                        @RequestParam double salario,
+                        @RequestParam boolean estuda,
+                        @RequestParam (required = false)String curso){  //vai deixar modificar as informaçoes na url
+                                      //o curso n é obrigatório
+
+        String mensagemcurso= "Não foi informado";
+
+        if (curso==null){
+           mensagemcurso= "Não informado";
+        }else {
+        mensagemcurso=curso;
+        } //na mesma variavel pode ser que tenha o curso ou n 
+
+
+        return "HI, sou " + nome +
+                " <br> Sou de " + cidade +
+                " <br> Tenho " + idade + " anos "
+                + " <br> Curso: " + mensagemcurso +
+                " <br> Salario: " + salario +
+                " <br> Estuda: " + estuda;
+
+
+
+    }
+
+}
