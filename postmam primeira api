@@ -1,0 +1,81 @@
+package com.example.minhaprimeiraapi;
+
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@RestController
+public class Alunocontroller {
+
+    @GetMapping("/Alunos")
+    public List<Aluno>alunos(){
+
+        return alunos;
+        }
+
+    @PostMapping("/Alunos")
+    public Aluno cadastrarAluno(@RequestBody Aluno aluno) {
+
+        aluno.setId(proximoId);
+        proximoId++;
+
+        alunos.add(aluno);
+
+        return aluno;
+    }
+    private List<Aluno> alunos = new ArrayList<>();
+    private int proximoId = 1;
+
+
+    }
+
+package com.example.minhaprimeiraapi;
+
+public class Aluno {
+
+    private int id;
+    private String nome;
+    private String cidade;
+    private int idade;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+}
+
+
+
+
